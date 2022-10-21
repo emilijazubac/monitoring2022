@@ -15,5 +15,13 @@ ggplot(d, aes(x=virus, y=death)) + geom_polygon()
 
 
 
-ggplot(d, aes(x=biofuels, y= oxydative)) + geom_point()
+library(ggplot2)
+setwd("~/lab/")
+ovid <- read.table("covid_agg.csv")
+covid <- read.table("covid_agg.csv", header=TRUE)
+#change point for excel
+# aso head=T can work
+summary(covdid)
+library(ggplot2)
+ggplot(covid, aes(x = lon, y = lat)) + geom_point(col="red", size=3)
 
