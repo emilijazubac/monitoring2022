@@ -26,3 +26,14 @@ plot(p224r63_2011$B2_sre, col=clg)
 clr <- colorRampPalette(c('dark red','red','pink'))(100) # 
 plot(p224r63_2011$B3_sre, col=clr)
 
+#excercise
+clnir <- colorRampPalette(c('red','orange','yellow'))(100) # 
+plot(p224r63_2011$B4_sre, col=clnir)
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+
+plotRGB(p224r63_2011, r=3, g=2, b=4, stretch="Lin")
+
