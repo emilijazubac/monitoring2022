@@ -129,9 +129,48 @@ plot(ndvi2006, col=cl)
 # Automatic spectral indices by the spectralIndices function
 si1992 <- spectralIndices(l1992, green=3, red=2, nir=1)
 plot(si1992,col=cl)
+#ERROR check with professor!!!!!!!!! 
+Error in x$.self$finalize() : attempt to apply non-function
+In addition: Warning messages:
+1: [rast] unknown extent
+ 
+2: [rast] unknown extent
+ 
+3: [rast] unknown extent
+ 
+4: [rast] unknown extent
+ 
+5: [rast] unknown extent
+ 
+Error in x$.self$finalize() : attempt to apply non-function
+Warning messages:
+1: [rast] unknown extent
+ 
+2: EVI/EVI2 parameters L_evi, G, C1 and C2 are defined for reflectance [0,1] but img values are outside of this range.
+  If you are using scaled reflectance values please provide the scaleFactor argument.
+  If img is in DN or radiance it must be converted to reflectance.
+  Skipping EVI calculation.
 
 si2006 <- spectralIndices(l2006, green=3, red=2, nir=1)
 plot(si2006,col=cl)
+#warning but no error
+Warning messages:
+1: [rast] unknown extent
+ 
+2: [rast] unknown extent
+ 
+3: [rast] unknown extent
+ 
+4: [rast] unknown extent
+ 
+5: [rast] unknown extent
+ 
+6: [rast] unknown extent
+ 
+7: EVI/EVI2 parameters L_evi, G, C1 and C2 are defined for reflectance [0,1] but img values are outside of this range.
+  If you are using scaled reflectance values please provide the scaleFactor argument.
+  If img is in DN or radiance it must be converted to reflectance.
+  Skipping EVI calculation.
 
 ### rasterdiv
 # plot(copNDVI)
