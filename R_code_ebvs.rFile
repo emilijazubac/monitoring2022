@@ -1,0 +1,16 @@
+# ncdf4
+library(raster)
+# install.packages("ncdf4")
+library(ncdf4)
+
+setwd("~/lab/")
+
+# birds
+#birds <- raster("martins_comcom_id1_20220208_v1.nc")
+
+# terrestrial
+terrestrial <- raster("purvis_comcom_id6_20220208_v2.nc")
+
+# forest loss
+#https://portal.geobon.org/ebv-detail?id=2
+#heavy
