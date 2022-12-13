@@ -1,0 +1,54 @@
+# use of ggplot2 and viridis for remote sensing data and maps
+library(raster)
+library(ggplot2)
+library(patchwork)
+library(RStoolbox)
+library(viridis)
+library(GGally) # for ggpairs
+
+# 1. ggRGB
+
+sent <- brick("/home/duccio/Documents/rao_devst/SENT2_gricilli_2022-07-04.tif")
+
+ggRGB(sent, 8,4,3)
+
+# 2. ggplot for single layers
+
+p01 <- ggplot() +
+geom_raster(raomultis, mapping =aes(x=x, y=y, fill=layer)) +
+scale_fill_viridis(option="viridis") +
+ggtitle("Multispectral Rao")
+
+p02 <- ggplot() +
+geom_raster(raomultis, mapping =aes(x=x, y=y, fill=layer)) +
+scale_fill_viridis(option="cividis") +
+ggtitle("Multispectral Rao")
+
+p03 <- ggplot() +
+geom_raster(raomultis, mapping =aes(x=x, y=y, fill=layer)) +
+scale_fill_viridis(option="magma") +
+ggtitle("Multispectral Rao")
+
+p04 <- ggplot() +
+geom_raster(raomultis, mapping =aes(x=x, y=y, fill=layer)) +
+scale_fill_viridis(option="plasma") +
+ggtitle("Multispectral Rao")
+
+p05 <- ggplot() +
+geom_raster(raomultis, mapping =aes(x=x, y=y, fill=layer)) +
+scale_fill_viridis(option="inferno") +
+ggtitle("Multispectral Rao")
+
+p06 <- ggplot() +
+geom_raster(raomultis, mapping =aes(x=x, y=y, fill=layer)) +
+scale_fill_viridis(option="mako") +
+ggtitle("Multispectral Rao")
+
+p07 <- ggplot() +
+geom_raster(raomultis, mapping =aes(x=x, y=y, fill=layer)) +
+scale_fill_viridis(option="rocket") +
+ggtitle("Multispectral Rao")
+
+p01 + p02 + p03 + p04 / p05 + p06 + p07
+
+#best: viridis, mako, rocket
