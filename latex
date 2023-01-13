@@ -1,0 +1,59 @@
+#on oneleaf
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{graphicx}
+\title{practice}
+\author{Emilija Zubac}
+\date{January 2023}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\section{Introduction} \label{intro}
+This is an introduction to this paper.
+
+\noindent This is another paragraph of the introduction
+\section{Methods}
+\subsection{study area} \label{study}
+The study area is neer my home and that is the reason I chose it.
+\subsection{Formulas}
+For my thesis I will be using the next formula:
+\begin{equation}
+    E = \alpha \times m \times \beta \times c^2
+    \label{Einstein}
+\end{equation}
+\begin{equation}
+    F = G \times \frac{m_1 \times m_2}{r^2}
+    \label{Newton}
+\end{equation}
+I used the quation \ref{Einstein} to calculate space time variables, while I used equatin \ref{Newton} to calculate bla bla.
+As I stated in section number \ref{intro}
+This work was nice and done in a nice are as described in the subsection \ref{study}
+
+\section{Results}
+\begin{enumerate}
+     \item Put whatever
+    \item number 3
+    \item four
+\end{enumerate}
+   
+\section{Discussion}
+As an example this has also been proven by other scientists.\citep{gillespie_2008}
+This was done in the Tara mountain (Figure \ref{Tara})
+\newpage
+\begin{bibliography}{999}
+\bibitem[gillespie_2008]{gillespie_2008}
+Gillespie, Thomas W., et al. "Measuring and modelling biodiversity from space." Progress in physical geography 32.2 (2008): 203-221.
+\end{bibliography}
+\newpage
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Tara-10.jpg}
+\caption{This is my fav natural area}
+\label{Tara}
+\end{figure}
+\end{document}
+
